@@ -8,7 +8,6 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_importmap_tags %>
   </head>
 
   <body>
@@ -30,7 +29,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-
+          <%= bootstrap_flash %>
           <%= yield %>
         </div>
       </div><!--/row-->
