@@ -4,6 +4,7 @@
     <div class="card-body">
       <h3><%= link_to @event.title, event_path(@event) %></h3>
       <h3><small><%= @event.datetime %></small></h3>
+      <h3><small><%= @event.description %></small></h3>
       <div class="buffer-both"><%= @event.address %></div>
 
       <% if current_user_can_edit?(@event) %>
