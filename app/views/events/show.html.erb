@@ -2,10 +2,11 @@
   <div class="card">
     <img src="<%= asset_path( 'event.jpg' ) %>" />
     <div class="card-body">
-      <h3><%= link_to @event.title, event_path(@event) %></h3>
+      <h3><%= @event.title %></h3>
       <h3><small><%= @event.datetime %></small></h3>
       <h3><small><%= @event.description %></small></h3>
-      <div class="buffer-both"><%= @event.address %></div>
+      <h4><small>Место проведения: <%= link_to @event.address,
+                                               "https://yandex.ru/maps/?text=#{@event.address}" %></small></h4>
 
       <% if current_user_can_edit?(@event) %>
         <div class="buffer-both">
