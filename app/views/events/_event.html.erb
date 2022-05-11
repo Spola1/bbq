@@ -1,10 +1,11 @@
-<div class="col-sm-6 col-md-4 mb-3">
-  <div class="card">
-    <img src="<%= asset_path( 'event.jpg' ) %>" />
-    <div class="card-body">
-      <h3><%= link_to event.title, event_path(event) %></h3>
-      <h3><small><%= event.datetime %></small></h3>
-      <div class="buffer-both"><%= event.address %></div>
+<div class="col-lg-4 col-md-6 mb-3">
+  <div class="card bg-dark text-white">
+    <%= image_tag 'event.jpg', class: 'card-img', alt: 'шашлыки', style: 'filter: blur(5px)' %>
+    <div class="card-img-overlay fw-bold">
+      <h3 class="card-title mb-4"><%= link_to event.title, event_path(event), class: 'link-light' %></h3>
+      <h4 class="card-text"><%= event.datetime %></h4>
+      <h4 class="card-text"><small><%= link_to event.address,
+                                               "https://yandex.ru/maps/?text=#{event.address}", class: 'link-light' %></small></h4>
     </div>
   </div>
 </div>
