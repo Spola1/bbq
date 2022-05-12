@@ -1,0 +1,89 @@
+ru:
+  app:
+    name: 'Шашлыки'
+
+  views:
+    buttons:
+      save: 'Сохранить'
+      back: 'вернуться'
+    links:
+      profile: 'Профиль'
+      logout: 'Выйти'
+      login: 'Войти'
+      register: 'Зарегистрироваться'
+    errors:
+      form_has: 'В вашей форме'
+      error:
+        one: '%{count} ошибка'
+        few: '%{count} ошибки'
+        many: '%{count} ошибок'
+    events:
+      list:
+        title: 'События'
+      new:
+        title: 'Новое событие'
+        add: 'Создать событие'
+      edit:
+        title: 'Редактировать событие'
+        action: 'Изменить'
+      destroy:
+        action: 'Удалить'
+        confirmation: 'Вы точно хотите удалить это событие?'
+      show:
+        place: 'Место проведения'
+    users:
+      create:
+        title: 'Регистрация'
+        action: 'Зарегистрироваться'
+      login:
+        title: 'Вход'
+        action: 'Войти'
+      show:
+        hosted:
+          true: 'Организовал'
+          false: 'Пользователь пока не организовал ни одного
+          события'
+      edit:
+        title: 'Редактирование профиля'
+        action: 'Редактировать профиль'
+      cancel:
+        title: 'Удаление профиля'
+        confirmation: 'Вы уверены, что хотите удалить свой профиль?'
+        action: 'Удалить мой профиль'
+      password:
+        edit:
+          title: 'Изменение пароля'
+          limit: 'символов минимум'
+        action: 'Изменить пароль'
+        forgot:
+          title: 'Восстановление пароля'
+          question: 'Забыли пароль?'
+        instructions:
+          show: 'Пожалуйста, введите свой адрес электронной почты, и мы вышлем вам ссылку для сброса вашего пароля.'
+          action: 'Отправить инструкции для сброса пароля'
+
+
+
+  controllers:
+    events:
+      created: 'Вы создали новое мероприятие'
+      updated: 'Вы обновили мероприятие'
+      destroyed: 'Вы удалили мероприятие :('
+    users:
+      updated: 'Вы обновили свой профиль'
+
+  activerecord:
+    models:
+      user: 'Пользователь'
+      event: 'Событие'
+    attributes:
+      user:
+        email: 'Email'
+        name: 'Имя'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+      event:
+        title: 'Название'
+        address: 'Место проведения'
+        datetime: 'Дата и время'
+        description: 'Описание'
