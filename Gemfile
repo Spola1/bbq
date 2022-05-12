@@ -15,7 +15,7 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.4'
 gem 'rails-i18n', '~> 7.0.0'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
-gem 'turbo-rails'
+gem "turbo-rails", "~> 1.0"
 gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
 
 group :development, :test do
