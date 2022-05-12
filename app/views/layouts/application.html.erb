@@ -16,11 +16,11 @@
         <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
         <div class="d-flex">
         <% if user_signed_in? %>
-          <%= button_to 'Профиль', current_user, :method => :get, class: 'btn btn-outline-success m-2' %>
-          <%= button_to 'Выйти', destroy_user_session_path, :method => :delete, class: 'btn btn-outline-success m-2' %>
+          <%= button_to t('views.links.profile'), current_user, :method => :get, class: 'btn btn-outline-success m-2' %>
+          <%= button_to t('views.links.logout'), destroy_user_session_path, :method => :delete, class: 'btn btn-outline-success m-2' %>
         <% else %>
-          <%= button_to 'Войти', new_user_session_path, :method => :get, class: 'btn btn-outline-success m-2' %>
-          <%= button_to 'Зарегистрироваться', new_user_registration_path, :method => :get, class: 'btn btn-outline-success m-2' %>
+          <%= button_to t('views.links.login'), new_user_session_path, :method => :get, class: 'btn btn-outline-success m-2' %>
+          <%= button_to t('views.links.register'), new_user_registration_path, :method => :get, class: 'btn btn-outline-success m-2' %>
         <% end %>
       </div>
       </div>

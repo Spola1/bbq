@@ -3,7 +3,7 @@
 <% if errors.any? %>
   <div class="alert alert-secondary col-md-6" role="alert">
     <div class="lead">
-      В вашей форме <%= errors.count %> ошибок
+      <%= t('views.errors.form_has') %> <%= I18n.t('views.errors.error', count: errors.count) %>
     </div>
 
     <ul>

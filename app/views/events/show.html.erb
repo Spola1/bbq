@@ -5,13 +5,16 @@
       <h3><%= @event.title %></h3>
       <h3><small><%= l @event.datetime, format: :short %></small></h3>
       <h3><small><%= @event.description %></small></h3>
-      <h4><small>Место проведения: <%= link_to @event.address,
-                                               "https://yandex.ru/maps/?text=#{@event.address}" %></small></h4>
+      <h4><small><%= t('views.events.show.place') %>: <%= link_to @event.address,
+        "https://yandex.ru/maps/?text=#{@event.address}" %></small></h4>
 
       <% if current_user_can_edit?(@event) %>
         <div class="buffer-both">
-          <%= link_to 'Изменить', edit_event_path(@event),
-            class: 'btn btn-primary' %>
+          <%= link_to t('views.events.edit.action'), edit_event_path(@event),
+            class: 'btn btn-primary mb-2' %>
+          <%= button_to t('views.events.destroy.action'), event_path,
+            form: {data: {turbo_confirm: t('views.events.destroy.confirmation')}},
+            method: :delete, class: 'btn btn-danger' %>
         </div>
       <% end %>
     </div>
