@@ -2,11 +2,22 @@ ru:
   app:
     name: 'Шашлыки'
 
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+
   views:
     or: 'или'
     buttons:
       save: 'Сохранить'
       back: 'вернуться'
+      send: 'Отправить'
+      subscribe: 'Подписаться'
     links:
       profile: 'Профиль'
       logout: 'Выйти'
@@ -72,6 +83,17 @@ ru:
           message: 'Кто-то запросил ссылку для смены вашего пароля. Вы можете сделать это по ссылке ниже.'
           ignore: 'Если вы не запрашивали это, пожалуйста, проигнорируйте это письмо.'
           instruction: 'Ваш пароль не изменится до тех пор, пока вы не перейдете по ссылке выше и не создадите новый.'
+    comments:
+      title: 'Комментарии:'
+      body: 'Текст'
+      user_name: 'Ваше имя'
+    subscriptions:
+      invite: 'Зовёт:'
+      come: 'Пойдут:'
+      i_come: 'Я пойду:'
+      user_name: 'Ваше имя'
+      user_email: 'Email'
+
 
   controllers:
     events:
@@ -80,6 +102,14 @@ ru:
       destroyed: 'Вы удалили мероприятие :('
     users:
       updated: 'Вы обновили свой профиль'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+    subscriptions:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
 
   activerecord:
     models:
