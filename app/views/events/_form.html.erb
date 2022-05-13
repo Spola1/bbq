@@ -1,5 +1,5 @@
 <%= form_for(@event) do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: @event} %>
+  <%= render partial: 'partials/form_errors', locals: {model: event} %>
 
   <div class="row">
     <div class="col-md-6 mb-3">
@@ -28,7 +28,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit t('views.buttons.save'), class: 'btn btn-primary' %>
+    <%= f.submit t('views.buttons.save'), class: 'btn btn-primary', data: { turbo: false } %>
     <%= t('views.or') %> <%= link_to t('views.buttons.back'), :back %>
   </div>
 <% end %>

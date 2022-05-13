@@ -1,8 +1,8 @@
-class CreateComments < ActiveRecord::Migration[7.0]
+class CreateSubscriptions < ActiveRecord::Migration[7.0]
   def change
-    create_table :comments do |t|
-      t.text :body
+    create_table :subscriptions do |t|
       t.string :user_name
+      t.string :user_email
       t.references :event, index: true, foreign_key: true
       t.references :user, index: true, foreign_key: true
 

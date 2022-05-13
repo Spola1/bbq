@@ -2,18 +2,18 @@
     <%= render partial: 'partials/form_errors', locals: {model: comment} %>
 
     <div class="form-group">
-      <%= f.label :body %>
+      <%= f.label :body, t('views.comments.body') %>
       <%= f.text_area :body, class: 'form-control' %>
     </div>
 
     <% unless user_signed_in? %>
         <div class="form-group">
-          <%= f.label :user_name %>
+          <%= f.label :user_name, t('views.comments.user_name') %>
           <%= f.text_field :user_name, class: 'form-control' %>
         </div>
     <% end %>
 
-    <div class="actions">
-      <%= f.submit 'Отправить', class: 'btn btn-primary' %>
+    <div class="actions mt-3">
+      <%= f.submit t('views.buttons.send'), class: 'btn btn-primary', data: { turbo: false } %>
     </div>
 <% end %>
