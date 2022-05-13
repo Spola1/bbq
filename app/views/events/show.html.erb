@@ -19,4 +19,13 @@
       <% end %>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="event-comments buffer-top">
+        <%= render partial: 'comments/comment', collection: @event.comments %>
+      </div>
+    </div>
+  </div>
+
 </div>
