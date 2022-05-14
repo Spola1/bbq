@@ -50,12 +50,14 @@
       </div>
     </div>
     <div class="event-subscription-form">
-      <h4><%= t('views.subscriptions.i_come') %></h4>
-      <div>
-        <%= render partial: 'subscriptions/form', locals: {
-          subscription: @new_subscription || @event.subscriptions.build
-        } %>
-      </div>
+      <% if current_user_can_subscribe?(@event) %>
+        <h4><%= t('views.subscriptions.i_come') %></h4>
+        <div>
+          <%= render partial: 'subscriptions/form', locals: {
+            subscription: @new_subscription || @event.subscriptions.build
+          } %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
