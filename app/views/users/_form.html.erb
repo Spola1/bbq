@@ -18,7 +18,7 @@
   </div>
 
   <div class="actions mb-2">
-    <%= form.submit t('views.buttons.save'), class: 'btn btn-primary' %>
+    <%= form.submit t('views.buttons.save'), class: 'btn btn-primary', data: { turbo: false } %>
     <%= t('views.or') %> <%= link_to t('views.buttons.back'), :back %>
   </div>
 <% end %>
