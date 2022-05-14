@@ -118,6 +118,9 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
+      subscription:
+        errors:
+          email_already_use: 'уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.'
     attributes:
       user:
         email: 'Email'
