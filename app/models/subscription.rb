@@ -26,7 +26,7 @@ class Subscription < ApplicationRecord
   end
 
   def current_email_already_use
-    if User.exists?(email: user_email)
+    if !user.present? && User.exists?(email: user_email)
       errors.add(:user_email, I18n.t('activerecord.models.subscription.errors.email_already_use'))
     end
   end
