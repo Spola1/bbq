@@ -62,7 +62,10 @@ ru:
         title: 'Удаление профиля'
         confirmation: 'Вы уверены, что хотите удалить свой профиль?'
         action: 'Удалить мой профиль'
+      email:
+        placeholder: 'Электронная почта'
       password:
+        placeholder: 'Пароль'
         edit:
           title: 'Изменение пароля'
           limit: 'символов минимум'
