@@ -11,6 +11,12 @@
     <%= form.text_field :email, class: 'form-control' %>
   </div>
 
+  <div class="form-group mb-3">
+    <%= form.label :avatar %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= form.file_field :avatar %>
+  </div>
+
   <div class="actions mb-2">
     <%= form.submit t('views.buttons.save'), class: 'btn btn-primary' %>
     <%= t('views.or') %> <%= link_to t('views.buttons.back'), :back %>
