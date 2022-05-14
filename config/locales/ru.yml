@@ -10,6 +10,10 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
+  photos:
+    photo:
+      destroy_confirm: 'Вы уверены, что хотите удалить это фото?'
+
 
   views:
     or: 'или'
@@ -18,6 +22,7 @@ ru:
       back: 'вернуться'
       send: 'Отправить'
       subscribe: 'Подписаться'
+      upload: 'Загрузить'
     links:
       profile: 'Профиль'
       logout: 'Выйти'
@@ -96,6 +101,9 @@ ru:
       i_come: 'Я пойду:'
       user_name: 'Ваше имя'
       user_email: 'Email'
+    photos:
+      title: 'Фотографии:'
+      add: 'Добавил'
 
 
   controllers:
@@ -113,16 +121,20 @@ ru:
       created: 'Вы подписаны на это событие'
       destroyed: 'Участник отписан'
       error: 'Подписка/отписка не сработала'
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
 
   activerecord:
     models:
       user: 'Пользователь'
       event: 'Событие'
-
     attributes:
       user:
         email: 'Email'
         name: 'Имя'
+        avatar: 'Аватар'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       event:
@@ -130,9 +142,10 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
-
-  errors:
-    models:
-      subscription:
-        creator_cant_subscribe: 'Создатель не может быть подписан на своё событие'
-        email_already_use: 'уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.'
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              creator_cant_subscribe: 'Создатель не может быть подписан на своё событие'
+              email_already_use: 'уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.'

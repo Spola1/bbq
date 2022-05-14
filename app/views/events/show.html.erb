@@ -33,6 +33,17 @@
           collection: @event.comments.except(@new_comment) %>
       </div>
     </div>
+
+    <div class="event-photos">
+      <h4><%= t('views.photos.title') %></h4>
+      <div class="event-photo-form">
+        <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+      </div>
+
+      <div class="event-photos-gallery">
+        <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+      </div>
+    </div>
   </div>
 
   <div class="col-md-4">
