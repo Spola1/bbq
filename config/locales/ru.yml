@@ -118,9 +118,7 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
-      subscription:
-        errors:
-          email_already_use: 'уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.'
+
     attributes:
       user:
         email: 'Email'
@@ -132,3 +130,9 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+
+  errors:
+    models:
+      subscription:
+        creator_cant_subscribe: 'Создатель не может быть подписан на своё событие'
+        email_already_use: 'уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.'

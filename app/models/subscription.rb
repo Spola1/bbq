@@ -7,7 +7,9 @@ class Subscription < ApplicationRecord
   validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/, unless: -> { user.present? }
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
+
   validate :current_email_already_use
+  validate :creator_cant_subscribe_self_event
 
   def user_name
     if user.present?
@@ -27,7 +29,13 @@ class Subscription < ApplicationRecord
 
   def current_email_already_use
     if !user.present? && User.exists?(email: user_email)
-      errors.add(:user_email, I18n.t('activerecord.models.subscription.errors.email_already_use'))
+      errors.add(:user_email, I18n.t('errors.models.subscription.email_already_use'))
+    end
+  end
+
+  def creator_cant_subscribe_self_event
+    if event.user.email == user_email
+      errors.add(:user_email, I18n.t('errors.models.subscription.creator_cant_subscribe'))
     end
   end
 end
