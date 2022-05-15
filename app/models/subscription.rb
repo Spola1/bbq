@@ -13,7 +13,9 @@ class Subscription < ApplicationRecord
     validates :user, uniqueness: {scope: :event_id}
   end
 
-  validate :creator_cant_subscribe_self_event
+  with_options if: -> {event.user == user} do
+    validate :creator_cant_subscribe_self_event
+  end
 
   def user_name
     if user.present?
@@ -31,6 +33,8 @@ class Subscription < ApplicationRecord
     end
   end
 
+  private
+
   def current_email_already_use
     if User.exists?(email: user_email)
       errors.add(:user_email, :email_already_use)
@@ -38,8 +42,6 @@ class Subscription < ApplicationRecord
   end
 
   def creator_cant_subscribe_self_event
-    if event.user == user
-      errors.add(:user_email, :creator_cant_subscribe)
-    end
+    errors.add(:user_email, :creator_cant_subscribe)
   end
 end
