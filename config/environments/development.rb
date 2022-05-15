@@ -37,7 +37,7 @@ Rails.application.configure do
   config.active_storage.service = :yandex
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
@@ -75,10 +75,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: '587',
-    user_name: '',
-    password: '',
+    user_name: ENV["MAILJET_SENDER"],
+    password: ENV["MAILJET_PASSWORD"],
     authentication: 'plain',
     enable_starttls_auto: true
   }
-
 end
