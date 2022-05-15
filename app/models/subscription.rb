@@ -11,7 +11,7 @@ class Subscription < ApplicationRecord
 
   with_options if: :user.present? do
     validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
-    validate :creator_cant_subscribe_self_event, if: -> { event.user.email == user_email }
+    validate :creator_cant_subscribe_self_event, if: -> { event.user == user }
   end
 
   def user_name
