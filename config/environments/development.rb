@@ -76,7 +76,7 @@ Rails.application.configure do
     address: 'smtp.gmail.com',
     port: '587',
     user_name: ENV["MAILJET_SENDER"],
-    password: ENV["MAILJET_PASSWORD"],
+    password: ENV["MAIL_PASSWORD"],
     authentication: 'plain',
     enable_starttls_auto: true
   }
