@@ -142,6 +142,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+
     errors:
       models:
         subscription:

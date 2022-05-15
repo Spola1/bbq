@@ -1,6 +1,6 @@
 <div class="col-lg-4 col-md-6 mb-3">
   <div class="card">
-    <img src="<%= asset_path( 'event.jpg' ) %>" />
+    <img src="<%= asset_path("#{event_photo(@event)}") %>" />
     <div class="card-body">
       <h3><%= @event.title %></h3>
       <h3><small><%= l @event.datetime, format: :short %></small></h3>
