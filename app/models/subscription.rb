@@ -11,9 +11,6 @@ class Subscription < ApplicationRecord
 
   with_options if: -> {user.present?} do
     validates :user, uniqueness: {scope: :event_id}
-  end
-
-  with_options if: -> {event.user == user} do
     validate :creator_cant_subscribe_self_event
   end
 
@@ -42,6 +39,8 @@ class Subscription < ApplicationRecord
   end
 
   def creator_cant_subscribe_self_event
-    errors.add(:user_email, :creator_cant_subscribe)
+    if event.user == user
+      errors.add(:user_email, :creator_cant_subscribe)
+    end
   end
 end
