@@ -16,6 +16,13 @@ ru:
 
 
   views:
+    event_mailer:
+      title: 'Новая подписка'
+      name: 'Имя:'
+      email: 'Email:'
+      event: 'Событие:'
+      data: 'Состоится:'
+      creator: 'Организатор:'
     or: 'или'
     buttons:
       save: 'Сохранить'

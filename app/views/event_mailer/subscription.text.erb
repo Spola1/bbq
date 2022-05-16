@@ -1,11 +1,11 @@
-Новая подписка
+<%= t('views.event_mailer.title') %>
 ----
 
-Имя: <%= @name %>
-Email: <%=  @email %>
+<%= t('views.event_mailer.name') %> <%= @name %>
+<%= t('views.event_mailer.email') %> <%=  @email %>
 
 ----------------------
 
-Событие: <%= @event.title %>
-Состоится: <%= l @event.datetime %>
-Организатор: <%= @event.user.name %>
+<%= t('views.event_mailer.event') %> <%= @event.title %>
+<%= t('views.event_mailer.data') %> <%= l @event.datetime, format: :short %>
+<%= t('views.event_mailer.creator') %> <%= @event.user.name %>
