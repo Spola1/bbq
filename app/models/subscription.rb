@@ -2,32 +2,24 @@ class Subscription < ApplicationRecord
   belongs_to :event
   belongs_to :user, optional: true
 
-  with_options unless: -> {user.present?} do
+  with_options unless: -> { user.present? } do
     validates :user_name, presence: true
     validates :user_email, presence: true, format: /\A[a-zA-Z0-9\-_.]+@[a-zA-Z0-9\-_.]+\z/
-    validates :user_email, uniqueness: {scope: :event_id}
+    validates :user_email, uniqueness: { scope: :event_id }
     validate :current_email_already_use
   end
 
-  with_options if: -> {user.present?} do
-    validates :user, uniqueness: {scope: :event_id}
+  with_options if: -> { user.present? } do
+    validates :user, uniqueness: { scope: :event_id }
     validate :creator_cant_subscribe_self_event
   end
 
   def user_name
-    if user.present?
-      user.name
-    else
-      super
-    end
+    user&.name || super
   end
 
   def user_email
-    if user.present?
-      user.email
-    else
-      super
-    end
+    user&.email || super
   end
 
   private
