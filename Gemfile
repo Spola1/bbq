@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.2"
 
 gem 'dotenv-rails'
+gem 'active_storage_validations'
 gem 'mailjet'
 gem 'aws-sdk-s3'
 gem 'bootsnap', require: false

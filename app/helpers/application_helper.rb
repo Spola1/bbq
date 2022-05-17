@@ -23,7 +23,7 @@ module ApplicationHelper
     photos = event.photos.persisted
 
     if photos.any?
-      photos.sample.photo.url
+      photos.sample.photo.variant(:thumb).url
     else
       asset_path('event.jpg')
     end

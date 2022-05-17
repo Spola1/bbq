@@ -1,4 +1,4 @@
-<%= form_for @user, html: { multipart: true } do |form| %>
+<%= form_for @user, html: { multipart: true }, data: { turbo: false } do |form| %>
   <%= render partial: 'partials/form_errors', locals: { model: @user } %>
 
   <div class="form-group mb-3">
@@ -12,9 +12,8 @@
   </div>
 
   <div class="form-group mb-3">
-    <%= form.label :avatar %>
-    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
-    <%= form.file_field :avatar %>
+    <b><%= form.label :avatar %></b>
+    <%= form.file_field :avatar, class: 'form-control' %>
   </div>
 
   <div class="actions mb-2">
