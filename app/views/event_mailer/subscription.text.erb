@@ -1,11 +1,11 @@
-<%= t('views.event_mailer.title') %>
+<%= t('views.event_mailer.subs.title') %>
 ----
 
-<%= t('views.event_mailer.name') %> <%= @name %>
-<%= t('views.event_mailer.email') %> <%=  @email %>
+<%= t('views.event_mailer.subs.name') %> <%= @name %>
+<%= t('views.event_mailer.subs.email') %> <%=  @email %>
 
 ----------------------
 
-<%= t('views.event_mailer.event') %> <%= @event.title %>
-<%= t('views.event_mailer.data') %> <%= l @event.datetime, format: :short %>
-<%= t('views.event_mailer.creator') %> <%= @event.user.name %>
+<%= t('views.event_mailer.subs.event') %> <%= @event.title %>
+<%= t('views.event_mailer.subs.data') %> <%= l @event.datetime, format: :short %>
+<%= t('views.event_mailer.subs.creator') %> <%= @event.user.name %>

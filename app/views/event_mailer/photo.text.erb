@@ -1,0 +1,10 @@
+<%= t('views.event_mailer.photo.title') %>
+----------------------
+
+<%= t('views.event_mailer.photo.author') %>: <%= @photo.user.name %>
+
+--------------------------------
+
+<%= t('views.event_mailer.photo.event') %>: <%= @event.title %>
+<%= t('views.event_mailer.photo.data') %>: <%= l @event.datetime, format: :short %>
+<%= t('views.event_mailer.photo.creator') %>: <%= @event.user.name %>
