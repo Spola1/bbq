@@ -1,14 +1,14 @@
-<h1><%= t '.title' %></h1>
+<h1><%= I18n.t('views.event_mailer.comment.title') %></h1>
 <p><%= @comment.body %></p>
-<p><%= t '.author' %>: <strong><%= @comment.user_name %></strong></p>
+<p><%= I18n.t('views.event_mailer.comment.author') %>: <strong><%= @comment.user_name %></strong></p>
 
 <hr/>
 
-<%= t '.event' %>
+<%= I18n.t('views.event_mailer.comment.event') %>
 <h3><%= @event.title %></h3>
 
-<%= t '.datetime' %>
+<%= I18n.t('views.event_mailer.comment.datetime') %>
 <h4><%= l @event.datetime, format: :short %></h4>
 
-<%= t '.owner' %>
+<%= I18n.t('views.event_mailer.comment.creator') %>
 <h4><%= @event.user.name %></h4>

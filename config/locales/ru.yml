@@ -16,21 +16,6 @@ ru:
 
 
   views:
-    event_mailer:
-      subs:
-        title: 'Новая подписка'
-        name: 'Имя:'
-        email: 'Email:'
-        event: 'Событие:'
-        data: 'Состоится:'
-        creator: 'Организатор:'
-      photo:
-        title: 'Новая фотография'
-        author: 'Автор:'
-        event: 'Событие:'
-        data: 'Состоится:'
-        creator: 'Организатор:'
-
     or: 'или'
     buttons:
       save: 'Сохранить'
@@ -125,15 +110,20 @@ ru:
         author: 'Автор'
         event: 'Событие'
         datetime: 'Состоится'
-        owner: 'Организатор'
-      subscription:
+        creator: 'Организатор'
+      subs:
         title: 'Новая подписка'
-        name: 'Имя'
-        email: 'Email'
-        author: 'Автор'
-        event: 'Событие'
-        datetime: 'Состоится'
-        owner: 'Организатор'
+        name: 'Имя:'
+        email: 'Email:'
+        event: 'Событие:'
+        datetime: 'Состоится:'
+        creator: 'Организатор:'
+      photo:
+        title: 'Новая фотография'
+        author: 'Автор:'
+        event: 'Событие:'
+        datetime: 'Состоится:'
+        creator: 'Организатор:'
 
 
 

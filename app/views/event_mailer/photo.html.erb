@@ -1,16 +1,14 @@
-<h1><%= t('views.event_mailer.photo.title') %></h1>
+<h1><%= I18n.t('views.event_mailer.photo.title') %></h1>
 <%= image_tag(@photo.photo.thumb.url) %>
-<p><%= t('views.event_mailer.photo.author') %>: <strong><%= @photo.user.name %></strong></p>
+<p><%= I18n.t('views.event_mailer.comment.author') %>: <strong><%= @photo.user.name %></strong></p>
 
 <hr/>
 
-<%= t('views.event_mailer.photo.event') %>
-<h3>
-  <%= link_to(@event.title, event_url(@event)) %>
-</h3>
+<%= I18n.t('views.event_mailer.photo.event') %>
+<h3><%= link_to(@event.title, event_url(@event)) %></h3>
 
-<%= t('views.event_mailer.photo.data') %>
+<%= I18n.t('views.event_mailer.photo.datetime') %>
 <h4><%= l @event.datetime, format: :short %></h4>
 
-<%= t('views.event_mailer.photo.creator') %>
+<%= I18n.t('views.event_mailer.photo.creator') %>
 <h4><%= @event.user.name %></h4>
