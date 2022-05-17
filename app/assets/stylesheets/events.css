@@ -62,7 +62,7 @@
 
 /* Avatars for users & events */
 .img-icon, .img-icon-small {
-  height: 50px;
+  height: 10px;
   width: auto;
   border-radius: 50%;
 }
