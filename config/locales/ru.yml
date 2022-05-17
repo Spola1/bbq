@@ -107,10 +107,10 @@ ru:
     event_mailer:
       comment:
         title: 'Новый комментарий'
-        author: 'Автор'
-        event: 'Событие'
-        datetime: 'Состоится'
-        creator: 'Организатор'
+        author: 'Автор:'
+        event: 'Событие:'
+        datetime: 'Состоится:'
+        creator: 'Организатор:'
       subs:
         title: 'Новая подписка'
         name: 'Имя:'
