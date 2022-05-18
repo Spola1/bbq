@@ -5,7 +5,7 @@
 
 <%= I18n.t('views.event_mailer.subs.event') %>
 
-<h3><%= @event.title %></h3>
+<h3><%= link_to(@event.title, event_url(@event)) %></h3>
 
 <%= I18n.t('views.event_mailer.subs.datetime') %>
 <h4><%= l @event.datetime, format: :short %></h4>

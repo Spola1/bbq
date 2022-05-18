@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="event-subscription-form">
-      <% if current_user_can_subscribe?(@event) %>
+      <% if @event.user != current_user %>
         <h4><%= t('views.subscriptions.i_come') %></h4>
         <div>
           <%= render partial: 'subscriptions/form', locals: {

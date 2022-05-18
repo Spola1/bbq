@@ -1,6 +1,7 @@
 <div class="event-photo">
   <hr>
   <%= render partial: 'users/user', object: photo.user %>
+  <em><%= l photo.created_at, format: :short %></em>
   <% if current_user_can_edit?(photo) %>
     <%= button_to fa_icon('trash'),
       event_photo_path(photo.event, photo),
