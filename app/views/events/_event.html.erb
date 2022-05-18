@@ -1,6 +1,6 @@
 <div class="col-lg-4 col-md-6 mb-3">
   <div class="card bg-dark text-white">
-    <%= image_tag 'event.jpg', class: 'card-img', alt: 'шашлыки', style: 'filter: blur(5px)' %>
+    <%= image_tag 'event.jpg', class: 'card-img img-fluid', alt: 'шашлыки', style: 'filter: blur(5px)' %>
     <div class="card-img-overlay fw-bold">
       <h3 class="card-title mb-4"><%= link_to event.title, event_path(event), class: 'link-light' %></h3>
       <h4 class="card-text"><%= l event.datetime, format: :short %></h4>
@@ -10,7 +10,7 @@
         class: 'link-light' %></small></h4>
       <div>
         <% event.visitors.each do |user| %>
-          <%= image_tag user_avatar(user), class: 'img-icon', title: user.name %>
+          <%= image_tag user_avatar(user), class: 'img-icons', title: user.name %>
         <% end %>
       </div>
     </div>

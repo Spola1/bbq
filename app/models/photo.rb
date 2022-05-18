@@ -3,7 +3,7 @@ class Photo < ApplicationRecord
   belongs_to :user
 
   has_one_attached :photo do |attachable|
-    attachable.variant :thumb, resize_to_limit: [400, 400]
+    attachable.variant :thumb, resize_to_limit: [600, 400]
   end
 
   validates :photo, attached: true, content_type: %i[img png jpg jpeg]

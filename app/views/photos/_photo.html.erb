@@ -1,6 +1,6 @@
 <div class="event-photo">
   <hr>
-  <%= t('views.photos.add') %> <%= render partial: 'users/user', object: photo.user %>
+  <%= render partial: 'users/user', object: photo.user %>
   <% if current_user_can_edit?(photo) %>
     <%= button_to fa_icon('trash'),
       event_photo_path(photo.event, photo),
