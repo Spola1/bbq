@@ -28,6 +28,7 @@ ru:
       logout: 'Выйти'
       login: 'Войти'
       register: 'Зарегистрироваться'
+      all_events: 'На главную'
     errors:
       form_has: 'В вашей форме'
       error:
@@ -48,6 +49,9 @@ ru:
         confirmation: 'Вы точно хотите удалить это событие?'
       show:
         place: 'Место проведения'
+      pincode:
+        title: 'Пинкод'
+        submit: 'Сохранить'
     users:
       create:
         title: 'Регистрация'
@@ -132,6 +136,7 @@ ru:
       created: 'Вы создали новое мероприятие'
       updated: 'Вы обновили мероприятие'
       destroyed: 'Вы удалили мероприятие :('
+      wrong_pincode: 'Неверный пинкод!'
     users:
       updated: 'Вы обновили свой профиль'
     comments:
@@ -163,6 +168,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Пинкод'
 
     errors:
       models:
