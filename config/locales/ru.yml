@@ -32,9 +32,9 @@ ru:
     errors:
       form_has: В вашей форме
       error:
-        one: %{count} ошибка
-        few: %{count} ошибки
-        many: %{count} ошибок
+        one: '%{count} ошибка'
+        few: '%{count} ошибки'
+        many: '%{count} ошибок'
     events:
       list:
         title: События
@@ -62,8 +62,7 @@ ru:
       show:
         hosted:
           true: Организовал
-          false: Пользователь пока не организовал ни одного
-          события
+          false: Пользователь пока не организовал ни одного события
       edit:
         title: Редактирование профиля
         action: Редактировать профиль
@@ -88,46 +87,46 @@ ru:
       change:
         title: Привет
         email:
-          is_changed: Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты меняется на:
-          has_changed: Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты был изменен на:
+          is_changed: 'Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты меняется на:'
+          has_changed: 'Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты был изменен на:'
         password:
           has_changed: Мы связываемся с Вами, чтобы уведомить о том, что Ваш пароль был изменен.
           message: Кто-то запросил ссылку для смены вашего пароля. Вы можете сделать это по ссылке ниже.
           ignore: Если вы не запрашивали это, пожалуйста, проигнорируйте это письмо.
           instruction: Ваш пароль не изменится до тех пор, пока вы не перейдете по ссылке выше и не создадите новый.
     comments:
-      title: Комментарии:
+      title: 'Комментарии:'
       body: Текст
       user_name: Ваше имя
     subscriptions:
-      invite: Зовёт:
-      come: Пойдут:
-      i_come: Я пойду:
+      invite: 'Зовёт:'
+      come: 'Пойдут:'
+      i_come: 'Я пойду:'
       user_name: Ваше имя
       user_email: Email
     photos:
-      title: Фотографии:
+      title: 'Фотографии:'
       add: Добавил
     event_mailer:
       comment:
         title: Новый комментарий
-        author: Автор:
-        event: Событие:
-        datetime: Дата проведения:
-        creator: Организатор:
+        author: 'Автор:'
+        event: 'Событие:'
+        datetime: 'Дата проведения:'
+        creator: 'Организатор:'
       subs:
         title: Новая подписка
-        name: Имя:
-        email: Email:
-        event: Событие:
-        datetime: Дата проведения:
-        creator: Организатор:
+        name: 'Имя:'
+        email: 'Email:'
+        event: 'Событие:'
+        datetime: 'Дата проведения:'
+        creator: 'Организатор:'
       photo:
         title: Новая фотография
-        author: Автор:
-        event: Событие:
-        datetime: Дата проведения:
-        creator: Организатор:
+        author: 'Автор:'
+        event: 'Событие:'
+        datetime: 'Дата проведения:'
+        creator: 'Организатор:'
 
   controllers:
     events:
@@ -164,7 +163,7 @@ ru:
       event:
         title: Название
         address: Место проведения
-        datetime: Дата и время
+        datetime: 'Дата проведения:'
         description: Описание
         pincode: Пинкод
     errors:
@@ -177,8 +176,8 @@ ru:
 
   event_mailer:
     subscription:
-      subject: Новая подписка на %{event}
+      subject: 'Новая подписка на %{event}'
     comment:
-      subject: Новый комментарий @%{event}
+      subject: 'Новый комментарий @%{event}'
     photo:
-      subject: Новая фотография @%{event}
+      subject: 'Новая фотография @%{event}'
