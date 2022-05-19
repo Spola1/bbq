@@ -129,8 +129,6 @@ ru:
         datetime: 'Состоится:'
         creator: 'Организатор:'
 
-
-
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -169,7 +167,6 @@ ru:
         datetime: 'Дата и время'
         description: 'Описание'
         pincode: 'Пинкод'
-
     errors:
       models:
         subscription:
@@ -177,3 +174,11 @@ ru:
             user_email:
               creator_cant_subscribe: 'Создатель не может быть подписан на своё событие'
               email_already_use: 'уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.'
+
+  event_mailer:
+    subscription:
+      subject: 'Новая подписка на %{event}'
+    comment:
+      subject: 'Новый комментарий @%{event}'
+    photo:
+      subject: 'Новая фотография @%{event}'
