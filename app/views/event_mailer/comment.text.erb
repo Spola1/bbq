@@ -1,11 +1,11 @@
-<%= t '.title' %>
+<%= t('views.event_mailer.comment.title') %>
 ----
 
 <%= @comment.body %>
 
-<%= t '.author' %>: <%= @comment.user_name %>
+<%= t('views.event_mailer.comment.author') %> <%= @comment.user_name %>
 
 --------------------------------
-<%= t '.event' %>: <%= @event.title %>
-<%= t '.datetime' %>: <%= l @event.datetime, format: :short %>
-<%= t '.owner' %>: <%= @event.user.name %>
+<%= t('views.event_mailer.comment.event') %> <%= @event.title %>
+<%= t('views.event_mailer.comment.datetime') %> <%= l @event.datetime, format: :short %>
+<%= t('views.event_mailer.comment.creator') %> <%= @event.user.name %>

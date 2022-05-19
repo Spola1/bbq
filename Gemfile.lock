@@ -166,6 +166,10 @@ GEM
     jmespath (1.6.1)
     jsbundling-rails (1.0.2)
       railties (>= 6.0.0)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.17.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -308,6 +312,7 @@ DEPENDENCIES
   importmap-rails (~> 1.0)
   jbuilder
   jsbundling-rails
+  letter_opener
   mailjet
   pg
   puma (~> 5.0)
