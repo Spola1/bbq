@@ -40,3 +40,5 @@
 /node_modules
 public/uploads
 .env
+yarn-error.log
+package-lock.json
