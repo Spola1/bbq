@@ -1,184 +1,184 @@
 ru:
   app:
-    name: 'Шашлыки'
+    name: Шашлыки
 
   comments:
     comment:
-      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+      destroy_confirm: Вы уверены, что хотите удалить этот комменатрий?
 
   subscriptions:
     subscription:
-      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+      destroy_confirm: Вы уверены, что хотите удалить эту подписку?
 
   photos:
     photo:
-      destroy_confirm: 'Вы уверены, что хотите удалить это фото?'
+      destroy_confirm: Вы уверены, что хотите удалить это фото?
 
 
   views:
-    or: 'или'
+    or: или
     buttons:
-      save: 'Сохранить'
-      back: 'вернуться'
-      send: 'Отправить'
-      subscribe: 'Подписаться'
-      upload: 'Загрузить'
+      save: Сохранить
+      back: вернуться
+      send: Отправить
+      subscribe: Подписаться
+      upload: Загрузить
     links:
-      profile: 'Профиль'
-      logout: 'Выйти'
-      login: 'Войти'
-      register: 'Зарегистрироваться'
-      all_events: 'На главную'
+      profile: Профиль
+      logout: Выйти
+      login: Войти
+      register: Зарегистрироваться
+      all_events: На главную
     errors:
-      form_has: 'В вашей форме'
+      form_has: В вашей форме
       error:
-        one: '%{count} ошибка'
-        few: '%{count} ошибки'
-        many: '%{count} ошибок'
+        one: %{count} ошибка
+        few: %{count} ошибки
+        many: %{count} ошибок
     events:
       list:
-        title: 'События'
+        title: События
       new:
-        title: 'Новое событие'
-        add: 'Создать событие'
+        title: Новое событие
+        add: Создать событие
       edit:
-        title: 'Редактировать событие'
-        action: 'Изменить'
+        title: Редактировать событие
+        action: Изменить
       destroy:
-        action: 'Удалить'
-        confirmation: 'Вы точно хотите удалить это событие?'
+        action: Удалить
+        confirmation: Вы точно хотите удалить это событие?
       show:
-        place: 'Место проведения'
+        place: Место проведения
       pincode:
-        title: 'Пинкод'
-        submit: 'Сохранить'
+        title: Пинкод
+        submit: Сохранить
     users:
       create:
-        title: 'Регистрация'
-        action: 'Зарегистрироваться'
+        title: Регистрация
+        action: Зарегистрироваться
       login:
-        title: 'Вход'
-        action: 'Войти'
+        title: Вход
+        action: Войти
       show:
         hosted:
-          true: 'Организовал'
-          false: 'Пользователь пока не организовал ни одного
-          события'
+          true: Организовал
+          false: Пользователь пока не организовал ни одного
+          события
       edit:
-        title: 'Редактирование профиля'
-        action: 'Редактировать профиль'
+        title: Редактирование профиля
+        action: Редактировать профиль
       cancel:
-        title: 'Удаление профиля'
-        confirmation: 'Вы уверены, что хотите удалить свой профиль?'
-        action: 'Удалить мой профиль'
+        title: Удаление профиля
+        confirmation: Вы уверены, что хотите удалить свой профиль?
+        action: Удалить мой профиль
       email:
-        placeholder: 'Электронная почта'
+        placeholder: Электронная почта
       password:
-        placeholder: 'Пароль'
+        placeholder: Пароль
         edit:
-          title: 'Изменение пароля'
-          limit: 'символов минимум'
-        action: 'Изменить пароль'
+          title: Изменение пароля
+          limit: символов минимум
+        action: Изменить пароль
         forgot:
-          title: 'Восстановление пароля'
-          question: 'Забыли пароль?'
+          title: Восстановление пароля
+          question: Забыли пароль?
         instructions:
-          show: 'Пожалуйста, введите свой адрес электронной почты, и мы вышлем вам ссылку для сброса вашего пароля.'
-          action: 'Отправить инструкции для сброса пароля'
+          show: Пожалуйста, введите свой адрес электронной почты, и мы вышлем вам ссылку для сброса вашего пароля.
+          action: Отправить инструкции для сброса пароля
       change:
-        title: 'Привет'
+        title: Привет
         email:
-          is_changed: 'Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты меняется на: '
-          has_changed: 'Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты был изменен на: '
+          is_changed: Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты меняется на:
+          has_changed: Мы связываемся с Вами, чтобы уведомить о том, что Ваш адрес электронной почты был изменен на:
         password:
-          has_changed: 'Мы связываемся с Вами, чтобы уведомить о том, что Ваш пароль был изменен.'
-          message: 'Кто-то запросил ссылку для смены вашего пароля. Вы можете сделать это по ссылке ниже.'
-          ignore: 'Если вы не запрашивали это, пожалуйста, проигнорируйте это письмо.'
-          instruction: 'Ваш пароль не изменится до тех пор, пока вы не перейдете по ссылке выше и не создадите новый.'
+          has_changed: Мы связываемся с Вами, чтобы уведомить о том, что Ваш пароль был изменен.
+          message: Кто-то запросил ссылку для смены вашего пароля. Вы можете сделать это по ссылке ниже.
+          ignore: Если вы не запрашивали это, пожалуйста, проигнорируйте это письмо.
+          instruction: Ваш пароль не изменится до тех пор, пока вы не перейдете по ссылке выше и не создадите новый.
     comments:
-      title: 'Комментарии:'
-      body: 'Текст'
-      user_name: 'Ваше имя'
+      title: Комментарии:
+      body: Текст
+      user_name: Ваше имя
     subscriptions:
-      invite: 'Зовёт:'
-      come: 'Пойдут:'
-      i_come: 'Я пойду:'
-      user_name: 'Ваше имя'
-      user_email: 'Email'
+      invite: Зовёт:
+      come: Пойдут:
+      i_come: Я пойду:
+      user_name: Ваше имя
+      user_email: Email
     photos:
-      title: 'Фотографии:'
-      add: 'Добавил'
+      title: Фотографии:
+      add: Добавил
     event_mailer:
       comment:
-        title: 'Новый комментарий'
-        author: 'Автор:'
-        event: 'Событие:'
-        datetime: 'Состоится:'
-        creator: 'Организатор:'
+        title: Новый комментарий
+        author: Автор:
+        event: Событие:
+        datetime: Дата проведения:
+        creator: Организатор:
       subs:
-        title: 'Новая подписка'
-        name: 'Имя:'
-        email: 'Email:'
-        event: 'Событие:'
-        datetime: 'Состоится:'
-        creator: 'Организатор:'
+        title: Новая подписка
+        name: Имя:
+        email: Email:
+        event: Событие:
+        datetime: Дата проведения:
+        creator: Организатор:
       photo:
-        title: 'Новая фотография'
-        author: 'Автор:'
-        event: 'Событие:'
-        datetime: 'Состоится:'
-        creator: 'Организатор:'
+        title: Новая фотография
+        author: Автор:
+        event: Событие:
+        datetime: Дата проведения:
+        creator: Организатор:
 
   controllers:
     events:
-      created: 'Вы создали новое мероприятие'
-      updated: 'Вы обновили мероприятие'
-      destroyed: 'Вы удалили мероприятие :('
-      wrong_pincode: 'Неверный пинкод!'
+      created: Вы создали новое мероприятие
+      updated: Вы обновили мероприятие
+      destroyed: Вы удалили мероприятие :(
+      wrong_pincode: Неверный пинкод!
     users:
-      updated: 'Вы обновили свой профиль'
+      updated: Вы обновили свой профиль
     comments:
-      destroyed: 'Комментарий удален'
-      created: 'Ваш комментарий добавлен'
-      error: 'Ошибка с комментарием'
+      destroyed: Комментарий удален
+      created: Ваш комментарий добавлен
+      error: Ошибка с комментарием
     subscriptions:
-      created: 'Вы подписаны на это событие'
-      destroyed: 'Участник отписан'
-      error: 'Подписка/отписка не сработала'
+      created: Вы подписаны на это событие
+      destroyed: Участник отписан
+      error: Подписка/отписка не сработала
     photos:
-      error: 'Что-то не так с фоткой'
-      created: 'Вы добавили фотографию к событию'
-      destroyed: 'Вы удалили фотку'
+      error: Что-то не так с фоткой
+      created: Вы добавили фотографию к событию
+      destroyed: Вы удалили фотку
 
   activerecord:
     models:
-      user: 'Пользователь'
-      event: 'Событие'
+      user: Пользователь
+      event: Событие
     attributes:
       user:
-        email: 'Email'
-        name: 'Имя'
-        avatar: 'Аватар'
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
+        email: Email
+        name: Имя
+        avatar: Аватар
+        password: Пароль
+        password_confirmation: Подтверждение пароля
       event:
-        title: 'Название'
-        address: 'Место проведения'
-        datetime: 'Дата и время'
-        description: 'Описание'
-        pincode: 'Пинкод'
+        title: Название
+        address: Место проведения
+        datetime: Дата и время
+        description: Описание
+        pincode: Пинкод
     errors:
       models:
         subscription:
           attributes:
             user_email:
-              creator_cant_subscribe: 'Создатель не может быть подписан на своё событие'
-              email_already_use: 'уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.'
+              creator_cant_subscribe: Создатель не может быть подписан на своё событие
+              email_already_use: уже зарегестрирован. Используйте другой Email для подписки или выполните вход в систему.
 
   event_mailer:
     subscription:
-      subject: 'Новая подписка на %{event}'
+      subject: Новая подписка на %{event}
     comment:
-      subject: 'Новый комментарий @%{event}'
+      subject: Новый комментарий @%{event}
     photo:
-      subject: 'Новая фотография @%{event}'
+      subject: Новая фотография @%{event}
