@@ -36,9 +36,11 @@
 
     <div class="event-photos">
       <h4><%= t('views.photos.title') %></h4>
+      <% if user_signed_in? %>
       <div class="event-photo-form">
         <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
       </div>
+      <% end %>
 
       <div class="event-photos-gallery">
         <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
