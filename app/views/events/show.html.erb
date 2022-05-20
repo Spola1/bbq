@@ -1,28 +1,30 @@
-<div class="col-lg-4 col-md-6 mb-3">
-  <div class="card">
-    <img src="<%= asset_path("#{event_photo(@event)}") %>" />
-    <div class="card-body">
-      <h3><%= @event.title %></h3>
-      <h3><small><%= l @event.datetime, format: :short %></small></h3>
-      <h3><small><%= @event.description %></small></h3>
-      <h4><small><%= @event.address %></small></h4>
+<div class="row align-items-center">
+  <div class="col-lg-4 col-md-5 mb-3">
+    <div class="card">
+      <img src="<%= asset_path("#{event_photo(@event)}") %>" />
+      <div class="card-body">
+        <h3><%= @event.title %></h3>
+        <h3><small><%= l @event.datetime, format: :short %></small></h3>
+        <h3><small><%= @event.description %></small></h3>
+        <h4><small><%= @event.address %></small></h4>
 
-      <% if current_user_can_edit?(@event) %>
-        <div class="buffer-both">
-          <%= link_to t('views.events.edit.action'), edit_event_path(@event),
-            class: 'btn btn-primary mb-2' %>
-          <%= button_to t('views.events.destroy.action'), event_path(@event),
-            form: { data: { turbo_confirm: t('views.events.destroy.confirmation') } },
-            method: :delete, class: 'btn btn-danger' %>
-        </div>
-      <% end %>
+        <% if current_user_can_edit?(@event) %>
+          <div class="buffer-both">
+            <%= link_to t('views.events.edit.action'), edit_event_path(@event),
+              class: 'btn btn-primary mb-2' %>
+            <%= button_to t('views.events.destroy.action'), event_path(@event),
+              form: { data: { turbo_confirm: t('views.events.destroy.confirmation') } },
+              method: :delete, class: 'btn btn-danger' %>
+          </div>
+        <% end %>
+      </div>
     </div>
+  </div>
+  <div class="col-lg-8 col-md-7 mb-3">
+    <div id="map" data-address="<%= @event.address %>" style="width: 100%; height: 30em"></div>
   </div>
 </div>
 
-<div class="map mt-4 mb-4">
-  <div id="map" data-address="<%= @event.address %>"></div>
-</div>
 
 <div class="row">
   <div class="col-md-8">
