@@ -5,8 +5,7 @@
       <h3><%= @event.title %></h3>
       <h3><small><%= l @event.datetime, format: :short %></small></h3>
       <h3><small><%= @event.description %></small></h3>
-      <h4><small><%= t('views.events.show.place') %>: <%= link_to @event.address,
-        "https://yandex.ru/maps/?text=#{@event.address}" %></small></h4>
+      <h4><small><%= @event.address %></small></h4>
 
       <% if current_user_can_edit?(@event) %>
         <div class="buffer-both">
@@ -19,6 +18,10 @@
       <% end %>
     </div>
   </div>
+</div>
+
+<div class="map mt-4 mb-4">
+  <div id="map" data-address="<%= @event.address %>"></div>
 </div>
 
 <div class="row">
