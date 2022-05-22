@@ -26,18 +26,15 @@
 </div>
 
 <div class="d-flex bc-galey">
-
-    <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
-
+  <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
 </div>
 
-<div class="col-md-4"
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div class="col-md-4"
     <h4><%= t('views.photos.title') %></h4>
     <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
-  <% end %>
-</div>
-
+  </div>
+<% end %>
 
 <div class="row">
   <div class="col-md-8">
