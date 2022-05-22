@@ -1,13 +1,5 @@
 <div class="event-photo">
-  <hr>
-  <%= render partial: 'users/user', object: photo.user %>
-  <em><%= l photo.created_at, format: :short %></em>
-  <% if current_user_can_edit?(photo) %>
-    <%= button_to fa_icon('trash'),
-      event_photo_path(photo.event, photo),
-      form: { data: { turbo_confirm: t('photos.photo.destroy_confirm') } },
-      method: :delete, class: 'bg-transparent border-0', form_class: 'd-inline'%>
-    <% end %>
-  <p class="mt-2"><%= image_tag(photo.photo.variant(:thumb), class: 'img-fluid mb-2') %></p>
-  <hr>
+  <% image_title = "#{render partial: 'photos/photo_header', locals: { photo: photo }}"%>
+  <%= link_to image_tag(photo.photo.url), photo.photo.url,
+              data: { lightbox: 'event-photos', title: image_title, size: '40x40' } %>
 </div>
