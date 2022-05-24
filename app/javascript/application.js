@@ -2,4 +2,5 @@
 import "@hotwired/turbo-rails"
 import * as bootstrap from "bootstrap"
 
-import "./app"
+import "./map.js"
+import "./lightbox.js"
