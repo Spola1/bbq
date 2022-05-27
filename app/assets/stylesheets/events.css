@@ -5,6 +5,11 @@
   margin-bottom: 20px;
 }
 
+.background-color-white {
+  display: inline;
+  background: orange;
+}
+
 .event-background {
   position: absolute;
   width: 100%;
