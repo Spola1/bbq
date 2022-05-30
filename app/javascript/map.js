@@ -1,26 +1,25 @@
-document.addEventListener("turbo:load", function() {
+document.addEventListener('turbo:load', () => {
   ymaps.ready(init);
-  var myMap;
 
-  function init(){
-    const address = document.getElementById('map').getAttribute('data-address');
+  function init() {
+    address = document.getElementById('map').getAttribute('data-address');
 
-    const myMap = new ymaps.Map("map", {
+    myMap = new ymaps.Map("map", {
       center: [55.76, 37.64],
       zoom: 10
     });
 
-    const myGeocoder = ymaps.geocode(address);
+    myGeocoder = ymaps.geocode(address);
 
     myGeocoder.then(
       function (res) {
-        const coordinates = res.geoObjects.get(0).geometry.getCoordinates();
+        coordinates = res.geoObjects.get(0).geometry.getCoordinates();
 
         myMap.geoObjects.add(
           new ymaps.Placemark(
             coordinates,
-            {iconContent: address},
-            {preset: 'islands#blueStretchyIcon'}
+            { iconContent: address },
+            { preset: 'islands#blueStretchyIcon' }
           )
         );
 
@@ -30,5 +29,5 @@ document.addEventListener("turbo:load", function() {
         alert('Ошибка при определении местоположения');
       }
     );
-  };
+  }
 })
