@@ -72,6 +72,10 @@
   border-radius: 50%;
 }
 
+.font-size-small {
+  font-size: 15px;
+}
+
 /* Thumbnails for events/index */
 .thumbnail {
   position: relative;

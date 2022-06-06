@@ -17,8 +17,8 @@
 
       <div class="form-group mt-3">
         <%= f.label :password %>
-        <em>(<%= @minimum_password_length %> <%= t('views.users.password.edit.limit') %>)</em>
         <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        <em class="font-size-small">(<%= @minimum_password_length %> <%= t('views.users.password.edit.limit') %>)</em>
       </div>
 
       <div class="form-group mt-3">
