@@ -36,11 +36,11 @@ end
 
 group :development do
   gem 'web-console'
-  gem 'capistrano', '~> 3.10', require: false
-  gem 'capistrano-bundler', '~> 2.0'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
   gem 'capistrano-passenger'
-  gem 'capistrano-rails', '~> 1.3', require: false
-  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
 
 group :production do
