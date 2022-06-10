@@ -6,6 +6,9 @@ ru:
     comment:
       destroy_confirm: Вы уверены, что хотите удалить этот комменатрий?
 
+  pundit:
+    not_authorized: "Это действие вам недоступно."
+
   subscriptions:
     subscription:
       destroy_confirm: Вы уверены, что хотите удалить эту подписку?

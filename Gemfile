@@ -20,6 +20,7 @@ gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'cssbundling-rails'
 gem 'puma', '~> 5.0'
+gem 'pundit', '~> 1.1'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.4'
 gem 'rails-i18n', '~> 7.0.0'
 gem 'rmagick'
@@ -32,6 +33,8 @@ group :development, :test do
   gem 'debug', platforms: %i[ mri mingw x64_mingw ]
   gem 'sqlite3', '~> 1.4'
   gem 'letter_opener'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
