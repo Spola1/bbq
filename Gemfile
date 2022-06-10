@@ -45,7 +45,7 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
-  gem 'capistrano-resque'
+
 end
 
 group :production do
