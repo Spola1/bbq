@@ -20,5 +20,6 @@ module Bbq
     # config.eager_load_paths << Rails.root.join("extras")
     config.generators.system_tests = nil
     config.i18n.default_locale = :ru
+    config.active_job.queue_adapter = :resque
   end
 end

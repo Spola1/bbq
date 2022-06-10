@@ -23,6 +23,7 @@ gem 'puma', '~> 5.0'
 gem 'pundit', '~> 1.1'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.4'
 gem 'rails-i18n', '~> 7.0.0'
+gem "resque"
 gem 'rmagick'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
@@ -44,6 +45,7 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
+  gem 'capistrano-resque'
 end
 
 group :production do
