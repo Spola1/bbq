@@ -5,6 +5,7 @@ class SubscriptionsController < ApplicationController
 
   def create
     @new_subscription = @event.subscriptions.build(subscription_params)
+    authorize @new_subscription
     @new_subscription.user = current_user
 
     if @new_subscription.save
