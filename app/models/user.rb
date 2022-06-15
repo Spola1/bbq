@@ -61,7 +61,7 @@ class User < ApplicationRecord
   end
 
   def set_email
-    self.email = "change@me.example" if self.email.blank?
+    self.email = "change@me#{rand(777)}.example" if self.email.blank?
   end
 
   def link_subscriptions
