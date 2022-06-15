@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:facebook]
+         :omniauthable, omniauth_providers: [:facebook, :github]
 
 
   has_many :events, dependent: :destroy
@@ -42,6 +42,18 @@ class User < ApplicationRecord
       user.email = email
       user.password = Devise.friendly_token.first(16)
     end
+  end
+
+  def self.find_for_github_oauth(access_token)
+    data = access_token.info
+    user = User.where(email: data['email']).first
+    unless user
+      user = User.create(
+        email: data['email'],
+        password: Devise.friendly_token[0,20]
+      )
+    end
+    user
   end
 
   private
