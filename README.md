@@ -1,24 +1,79 @@
-# README
+# BBQ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![RubyOnRails](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+**7.0.2**
 
-Things you may want to cover:
 
-* Ruby version
+![Ruby](https://img.shields.io/badge/Ruby-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white) 
+**3.0.2**
 
-* System dependencies
+### Приложение в котором вы можете организовывать события, делиться фотографиями и впечатлениями.
 
-* Configuration
 
-* Database creation
+#### Запуск программы:
 
-* Database initialization
+* Скопируйте репозиторий:
 
-* How to run the test suite
+```
+git clone git@github.com:Spola1/bbq.git
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+* Войдите в папку с программой:
 
-* Deployment instructions
+```
+cd ./bbq
+```
 
-* ...
+* Установите библиотеки:
+
+```
+bundle install
+```
+
+* Запустите миграции:
+
+```
+rails db:migrate
+```
+
+* Соберите стили приложения:
+
+```
+yarn install
+```
+
+```
+yarn build
+```
+
+```
+yarn build:css
+```
+
+* Запустите сервер:
+
+```
+rails s
+```
+
+
+### Реализованный функционал:
+
+- Authorization (Pundit)
+- OAuth (Vkontakte, Github)
+- 2 languages (ru, en), i18n
+- Event: creating, editing, deleting
+- Possibility to set a pin-code for private access
+- Comments to the event
+- Subscription to the event
+- Sending email
+- Uploading files and a gallery of event photos (carrierwave, lightbox)
+- Authentication, Sessions (Devise)
+
+### Стили страниц: 
+
+Bootstrap 5.1.3
+
+### Тесты:
+
+Rspec
