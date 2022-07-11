@@ -59,16 +59,16 @@ rails s
 
 ### Реализованный функционал:
 
-- Authorization (Pundit)
-- OAuth (Vkontakte, Github)
-- 2 languages (ru, en), i18n
-- Event: creating, editing, deleting
-- Possibility to set a pin-code for private access
-- Comments to the event
-- Subscription to the event
-- Sending email
-- Uploading files and a gallery of event photos (carrierwave, lightbox)
-- Authentication, Sessions (Devise)
+- Авторизация (Pundit)
+- Вход через соц.сети (Vkontakte, Github)
+- Интернационализация (ru, en), i18n
+- Событие: создание, редактирование, удаление
+- Возможность задать пнкод для события
+- Комментарии для события
+- Подписки на событие
+- Отправка почты (mailjet)
+- Загрузка фотографий (carrierwave, lightbox)
+- Аутентификация (Devise)
 
 ### Стили страниц: 
 
