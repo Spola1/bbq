@@ -30,6 +30,16 @@ cd ./bbq
 bundle install
 ```
 
+* Пропишите ключи .env и credentials
+
+```
+nano .env
+```
+
+```
+EDITOR=nano bin/rails credentials:edit
+```
+
 * Запустите миграции:
 
 ```
