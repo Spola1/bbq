@@ -30,15 +30,35 @@ cd ./bbq
 bundle install
 ```
 
-* Пропишите ключи .env и credentials
+* Cкопируйте названия ключей из .env.example в свой файл .env и пропишите свои данные
 
 ```
-nano .env
+cp .env.sample .env
 ```
 
-```
-EDITOR=nano bin/rails credentials:edit
-```
+>__.env__
+>```
+>  MAILJET_API_KEY=
+>  MAILJET_SECRET_KEY=
+>  MAILJET_SENDER=
+>
+>  MAIL_PASSWORD=
+>
+>  MAPBOX_TOKEN=
+>
+>  POSTGRES_PASSWORD=
+>
+>  OMNIAUTH_GITHUB_ID_PROD=
+>  OMNIAUTH_GITHUB_KEY_PROD=
+>
+>  OMNIAUTH_VK_ID_PROD=
+>  OMNIAUTH_VK_KEY_PROD=
+>
+>  YANDEX_MAPS_API_KEY=
+>
+>  YC_ACCESS_KEY_ID=
+>  YC_SECRET_ACCESS_KEY=
+>```
 
 * Запустите миграции:
 
