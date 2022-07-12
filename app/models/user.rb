@@ -8,15 +8,15 @@ class User < ApplicationRecord
   has_many :subscriptions, dependent: :destroy
   has_many :photos, dependent: :destroy
 
+  attr_accessor :email, :password, :password_confirmation, :remember_me
+  attr_accessor :nickname, :provider, :url, :username
+
   has_one_attached :avatar do |attachable|
     attachable.variant :thumb, resize_to_limit: [10, 10]
   end
 
   validates :avatar, content_type: %i[img png jpg jpeg]
   validates :name, presence: true, length: { maximum: 35 }
-
-  before_validation :set_email, on: :create
-  before_validation :set_name, on: :create
 
   after_commit :link_subscriptions, on: :create
 
@@ -37,22 +37,12 @@ class User < ApplicationRecord
   end
 
   def self.find_for_vkontakte_oauth(access_token)
-    email = access_token.info.email
-
-    user = where(email: email).first
-    return user if user.present?
-
-    provider = access_token.provider
-    id = access_token.extra.raw_info.id
-    url = "http://vk.com/id#{id}"
-    name = access_token.info.name
-
-    where(url: url, provider: provider).first_or_create! do |user|
-      user.name = name
-      user.email = email
-      user.password = Devise.friendly_token.first(16)
+    if user = User.where(:url => access_token.info.urls.Vkontakte).first
+      user
+    else
+      User.create!(:provider => access_token.provider, :url => access_token.info.urls.Vkontakte, :username => access_token.info.name, :nickname => access_token.extra.raw_info.domain, :email => access_token.extra.raw_info.domain+'<hh user=vk>.com', :password => Devise.friendly_token[0,20])
     end
-  end
+   end
 
   private
 
