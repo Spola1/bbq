@@ -33,7 +33,7 @@ bundle install
 * Cкопируйте названия ключей из .env.example в свой файл .env и пропишите свои данные
 
 ```
-cp .env.sample .env
+cp .env.example .env
 ```
 
 >__.env__
