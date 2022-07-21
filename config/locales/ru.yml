@@ -32,12 +32,15 @@ ru:
       login: Войти
       register: Зарегистрироваться
       all_events: На главную
+      admin: Панель администротора
     errors:
       form_has: В вашей форме
       error:
         one: '%{count} ошибка'
         few: '%{count} ошибки'
         many: '%{count} ошибок'
+      not_admin: Это действие Вам недоступно
+      not_authorized_admin: Необходимо выполнить вход в систему
     events:
       list:
         title: События

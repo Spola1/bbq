@@ -7,6 +7,8 @@ gem 'ed25519', '>= 1.2', '< 2.0'
 gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 gem 'image_processing', '>= 1.2'
 gem 'dotenv-rails'
+gem 'rails_admin', '~> 3.0'
+gem 'rails_admin-i18n'
 gem 'active_storage_validations'
 gem 'mailjet'
 gem 'aws-sdk-s3'
@@ -56,3 +58,5 @@ end
 group :production do
   gem 'pg'
 end
+gem "sassc-rails"
+gem "sassc-rails"
