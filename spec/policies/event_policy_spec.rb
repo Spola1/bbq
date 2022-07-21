@@ -27,9 +27,15 @@ RSpec.describe EventPolicy, type: :policy do
         is_expected.to permit(nil, event)
       end
     end
+
+    permissions :show? do
+      it "gets permission" do
+        is_expected.to permit(user_is_not_an_owner, event)
+      end
+    end
   end
 
-  context "when user authotized" do
+  context "when user not authotized" do
     permissions :edit?, :destroy?, :update? do
       it "does not gets permission" do
         is_expected.not_to permit(nil, event)
