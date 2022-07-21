@@ -99,6 +99,7 @@ rails s
 - Отправка почты (mailjet)
 - Загрузка фотографий (carrierwave, lightbox)
 - Аутентификация (Devise)
+- Панель администратора (rails_admin)
 
 ### Стили страниц: 
 
