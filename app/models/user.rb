@@ -8,9 +8,6 @@ class User < ApplicationRecord
   has_many :subscriptions, dependent: :destroy
   has_many :photos, dependent: :destroy
 
-  attr_accessor :email, :password, :password_confirmation, :remember_me
-  attr_accessor :nickname, :provider, :url, :username
-
   has_one_attached :avatar do |attachable|
     attachable.variant :thumb, resize_to_limit: [10, 10]
   end
