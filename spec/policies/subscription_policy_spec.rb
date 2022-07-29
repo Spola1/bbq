@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe SubscriptionPolicy do
   let(:user_is_an_owner) { User.new }
   let(:user_is_not_an_owner) { User.new }
+  let(:user_is_admin) { User.new admin: true }
   let(:subscription) { user_is_an_owner.subscriptions.build }
 
   subject { SubscriptionPolicy }
@@ -12,6 +13,13 @@ RSpec.describe SubscriptionPolicy do
       context "and is the owner of subscription" do
         it "gets permission" do
           is_expected.to permit(user_is_an_owner, subscription)
+          is_expected.to permit(user_is_admin, subscription)
+        end
+      end
+
+      context "and is the admin" do
+        it "gets permission" do
+          is_expected.to permit(user_is_admin, subscription)
         end
       end
 

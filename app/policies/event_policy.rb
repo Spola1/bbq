@@ -25,6 +25,6 @@ class EventPolicy < ApplicationPolicy
   private
 
   def user_is_owner?(event)
-    event.present? && (event.try(:user) == user)
+    event.present? && (event.try(:user) == user) || user&.admin == true
   end
 end

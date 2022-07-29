@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.describe EventPolicy, type: :policy do
   let(:user_is_an_owner) { User.new }
   let(:user_is_not_an_owner) { User.new }
+  let(:user_is_admin) { User.new admin: true }
   let(:event) { user_is_an_owner.events.build }
 
   subject { EventPolicy }
@@ -12,6 +13,12 @@ RSpec.describe EventPolicy, type: :policy do
       context "and is the owner of event" do
         it "gets permission" do
           is_expected.to permit(user_is_an_owner, event)
+        end
+      end
+
+      context "and is the admin" do
+        it "gets permission" do
+          is_expected.to permit(user_is_admin, event)
         end
       end
 
