@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
 
   describe "creation" do
     it "should have 3 items created after being created" do
-      expect(User.all.count).to eq (3)
+      expect(User.all.count).to eq (1)
     end
 
     it "should create valid User with correct name, email, password" do
