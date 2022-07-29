@@ -13,7 +13,6 @@ RSpec.describe SubscriptionPolicy do
       context "and is the owner of subscription" do
         it "gets permission" do
           is_expected.to permit(user_is_an_owner, subscription)
-          is_expected.to permit(user_is_admin, subscription)
         end
       end
 
