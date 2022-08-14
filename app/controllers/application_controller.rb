@@ -23,8 +23,8 @@ class ApplicationController < ActionController::Base
 
   def current_user_can_edit?(model)
     user_signed_in? &&
-      model.user == current_user || (model.try(:event).present? && model.event.user == current_user) ||
-       current_user&.admin == true || (current_user&.redactor == true && model.user&.admin == false)
+    model.user == current_user || (model.try(:event).present? && model.event.user == current_user) ||
+    current_user&.admin == true || (current_user&.redactor == true && model.user&.admin == false)
   end
 
   private

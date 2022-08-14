@@ -7,7 +7,7 @@ ru:
       destroy_confirm: Вы уверены, что хотите удалить этот комменатрий?
 
   pundit:
-    not_authorized: "Это действие вам недоступно."
+    not_authorized: Это действие вам недоступно
 
   subscriptions:
     subscription:
@@ -19,6 +19,11 @@ ru:
 
 
   views:
+    search_results:
+      found: Результаты поиска
+      not_found: Событий с таким названием не найдено
+    placeholders:
+      event_name: Название события
     or: или
     buttons:
       save: Сохранить
@@ -26,6 +31,8 @@ ru:
       send: Отправить
       subscribe: Подписаться
       upload: Загрузить
+      search: Поиск
+      main_page: На главную
     links:
       profile: Профиль
       logout: Выйти

@@ -1,0 +1,12 @@
+<% if @events.present? %>
+  <h1><%= t('views.search_results.found') %></h1>
+  <div class="mb-3 mt-2">
+    <%= link_to t('views.buttons.main_page'), root_path, class: 'btn btn-success' %>
+  </div>
+  <%= render @events  %>
+<% else %>
+  <h1><%= t('views.search_results.not_found') %></h1>
+  <div class="mb-3 mt-2">
+    <%= link_to t('views.buttons.main_page'), root_path, class: 'btn btn-success' %>
+  </div>
+<% end %>

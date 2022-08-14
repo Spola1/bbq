@@ -15,19 +15,27 @@
   <body>
     <nav class="navbar navbar-default bg-dark mb-4">
       <div class="container">
-        <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
+      <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
         <div class="d-flex">
-        <% if current_user&.admin == true  %>
-          <%= button_to t('views.links.admin'), rails_admin_path, method: :get, class: 'btn btn-outline-success m-2', data: { turbo: false } %>
-        <% end %>
-        <% if user_signed_in? %>
-          <%= button_to t('views.links.profile'), current_user, method: :get, class: 'btn btn-outline-success m-2', data: { turbo: false } %>
-          <%= button_to t('views.links.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-outline-success m-2', data: { turbo: false } %>
-        <% else %>
-          <%= button_to t('views.links.login'), new_user_session_path, method: :get, class: 'btn btn-outline-success m-2' %>
-          <%= button_to t('views.links.register'), new_user_registration_path, method: :get, class: 'btn btn-outline-success m-2' %>
-        <% end %>
-      </div>
+          <form action="/search" class="row g-3">
+            <div class="col-auto">
+              <input type="text" name="q" placeholder="<%= t('views.placeholders.event_name') %>" class="form-control m-2">
+            </div>
+            <div class="col-auto">
+              <button type="submit" name="button" class='btn btn-success m-2'><%= t('views.buttons.search') %></button>
+            </div>
+          </form>
+          <% if current_user&.admin == true  %>
+            <%= button_to t('views.links.admin'), rails_admin_path, method: :get, class: 'btn btn-outline-success m-2', data: { turbo: false } %>
+          <% end %>
+          <% if user_signed_in? %>
+            <%= button_to t('views.links.profile'), current_user, method: :get, class: 'btn btn-outline-success m-2', data: { turbo: false } %>
+            <%= button_to t('views.links.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-outline-success m-2', data: { turbo: false } %>
+          <% else %>
+            <%= button_to t('views.links.login'), new_user_session_path, method: :get, class: 'btn btn-outline-success m-2' %>
+            <%= button_to t('views.links.register'), new_user_registration_path, method: :get, class: 'btn btn-outline-success m-2' %>
+          <% end %>
+        </div>
       </div>
     </nav>
 
