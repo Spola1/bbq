@@ -6,15 +6,15 @@
       <%= content_tag 'div', '', class: 'event-background',
       style: "background-image: url(#{event_photo(@event)})" %>
       <div class="card-body">
-        <h3 class="background-color-orange"><%= @event.title %></h3><br>
-        <h3 class="background-color-orange"><small><%= l @event.datetime, format: :short %></small></h3><br>
-        <h3 class="background-color-orange"><small><%= @event.description %></small></h3><br>
-        <h4 class="background-color-orange"><small><%= @event.address %></small></h4>
+        <h3 class="badge bg-success fs-3"><%= @event.title %></h3><br>
+        <h3 class="badge bg-primary fs-4"><small><%= l @event.datetime, format: :short %></small></h3><br>
+        <h3 class="badge bg-primary fs-4"><small><%= @event.description %></small></h3><br>
+        <h4 class="badge bg-primary fs-4"><small><%= @event.address %></small></h4>
 
         <% if current_user_can_edit?(@event) %>
           <div class="buffer-both">
             <%= link_to t('views.events.edit.action'), edit_event_path(@event),
-              class: 'btn btn-primary mb-2' %>
+              class: 'btn btn-warning mb-2' %>
             <%= button_to t('views.events.destroy.action'), event_path(@event),
               form: { data: { turbo_confirm: t('views.events.destroy.confirmation') } },
               method: :delete, class: 'btn btn-danger' %>

@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   end
 
   def search
-    @events = Event.where("title LIKE ?", "%" + params[:q] + "%")
+    @events = Event.where("address || title || description LIKE ?", "%" + params[:q] + "%")
   end
 
   def show

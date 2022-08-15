@@ -1,16 +1,18 @@
 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 mb-3 display: flex">
   <div class="card bg-dark text-white">
-    <%= image_tag 'event.jpg', class: 'card-img img-fluid', alt: 'шашлыки', style: 'filter: blur(5px)' %>
-    <div class="card-img-overlay fw-bold">
-      <h3 class="card-title mb-4"><%= link_to event.title, event_path(event), class: 'link-light', data: { turbo: false } %></h3>
-      <h4 class="card-text"><%= l event.datetime, format: :short %></h4>
-      <h4 class="card-text"><%= event.description %></h4>
-      <h4 class="card-text"><small><%= t('views.events.show.place') %>:
+    <%= image_tag event_photo(event), class: 'card-img img-fluid', alt: 'шашлыки', style: 'filter: blur(5px); height: 302px' %>
+    <div class="card-img-overlay fw-bold row">
+      <h3 class="bg-primary fs-3" style="--bs-bg-opacity: .5;"><%= link_to event.title, event_path(event), class: 'link-light', data: { turbo: false } %></h3>
+      <h4 class="bg-success fs-3" style="--bs-bg-opacity: .4;"><%= l event.datetime, format: :short %></h4>
+      <h4 class="bg-success fs-3" style="--bs-bg-opacity: .4;"><%= event.description %></h4>
+      <h4 class="bg-success fs-3" style="--bs-bg-opacity: .4;"><small><%= t('views.events.show.place') %>:
       <%= link_to event.address, "https://yandex.ru/maps/?text=#{event.address}",
         class: 'link-light' %></small></h4>
-      <% event.visitors.each do |user| %>
-        <%= image_tag user_avatar(user), size: '40x40', class: 'rounded-circle', title: user.name %>
-      <% end %>
+        <div class="col-lg-6 col-md-6 mb-3 display: flex">
+          <% event.visitors.each do |user| %>
+            <%= link_to image_tag(user_avatar(user), width: 40), user_path(user), class: 'rounded-circle', title: user.name %>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>

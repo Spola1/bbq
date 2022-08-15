@@ -21,9 +21,9 @@ ru:
   views:
     search_results:
       found: Результаты поиска
-      not_found: Событий с таким названием не найдено
+      not_found: По данному запросу событий не найдено
     placeholders:
-      event_name: Название события
+      event_name: Данные события
     or: или
     buttons:
       save: Сохранить
