@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_event, only: [:create, :destroy]
+  before_action :set_event, only: %i[create destroy]
   before_action :set_photo, only: [:destroy]
   after_action :verify_authorized, only: [:destroy]
 
@@ -17,7 +17,7 @@ class PhotosController < ApplicationController
 
   def destroy
     authorize @photo
-    message = {notice: I18n.t('controllers.photos.destroyed')}
+    message = { notice: I18n.t('controllers.photos.destroyed') }
 
     @photo.destroy
 

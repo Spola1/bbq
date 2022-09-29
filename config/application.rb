@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -18,7 +18,6 @@ module Bbq
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.assets.initialize_on_precompile = false
     config.generators.system_tests = nil
     config.i18n.default_locale = :ru
     config.active_job.queue_adapter = :resque

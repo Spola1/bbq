@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
   config.asset_source = :sprockets
 
-  config.authorize_with do |controller|
+  config.authorize_with do |_controller|
     if current_user.nil?
       redirect_to main_app.new_user_session_path, alert: I18n.t('views.errors.not_authorized_admin')
     elsif !current_user.admin?

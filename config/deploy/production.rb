@@ -1,4 +1,4 @@
-server "bbqrails.ru", user: "deploy", roles: %w[app db resque_worker web]
+server 'bbqrails.ru', user: 'deploy', roles: %w[app db resque_worker web]
 
 set :resque_environment_task, true
 

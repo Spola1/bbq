@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_event, only: [:create, :destroy]
+  before_action :set_event, only: %i[create destroy]
   before_action :set_comment, only: [:destroy]
   after_action :verify_authorized, only: [:destroy]
 
@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 
   def destroy
     authorize @comment
-    message = {notice: I18n.t('controllers.comments.destroyed')}
+    message = { notice: I18n.t('controllers.comments.destroyed') }
 
     @comment.destroy!
 

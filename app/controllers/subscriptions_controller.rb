@@ -1,5 +1,5 @@
 class SubscriptionsController < ApplicationController
-  before_action :set_event, only: [:create, :destroy]
+  before_action :set_event, only: %i[create destroy]
   before_action :set_subscription, only: [:destroy]
   after_action :verify_authorized, only: [:destroy]
 
@@ -18,7 +18,7 @@ class SubscriptionsController < ApplicationController
 
   def destroy
     authorize @subscription
-    message = {notice: I18n.t('controllers.subscriptions.destroyed')}
+    message = { notice: I18n.t('controllers.subscriptions.destroyed') }
 
     @subscription.destroy
 

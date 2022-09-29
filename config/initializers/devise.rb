@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require "omniauth-facebook"
+
+require 'omniauth-facebook'
 # Assuming you have not yet modified this file, each configuration option below
 # is set to its default value. Note that some are commented out while others
 # are not: uncommented lines are intended to protect your configuration from
@@ -272,8 +273,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :github, ENV["OMNIAUTH_GITHUB_ID_PROD"], ENV["OMNIAUTH_GITHUB_KEY_PROD"], scope: 'user:email'
-  config.omniauth :vkontakte, ENV["OMNIAUTH_VK_ID_PROD"], ENV["OMNIAUTH_VK_KEY_PROD"], scope: 'user:email'
+  config.omniauth :github, ENV['OMNIAUTH_GITHUB_ID_PROD'], ENV['OMNIAUTH_GITHUB_KEY_PROD'], scope: 'user:email'
+  config.omniauth :vkontakte, ENV['OMNIAUTH_VK_ID_PROD'], ENV['OMNIAUTH_VK_KEY_PROD'], scope: 'user:email'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

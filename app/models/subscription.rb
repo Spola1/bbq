@@ -25,14 +25,10 @@ class Subscription < ApplicationRecord
   private
 
   def current_email_already_use
-    if User.exists?(email: user_email)
-      errors.add(:user_email, :email_already_use)
-    end
+    errors.add(:user_email, :email_already_use) if User.exists?(email: user_email)
   end
 
   def creator_cant_subscribe_self_event
-    if event.user == user
-      errors.add(:user_email, :creator_cant_subscribe)
-    end
+    errors.add(:user_email, :creator_cant_subscribe) if event.user == user
   end
 end

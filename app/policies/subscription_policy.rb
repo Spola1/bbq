@@ -12,6 +12,6 @@ class SubscriptionPolicy < ApplicationPolicy
   def current_user_can_edit?(subscribtion)
     user.present? && ((subscribtion.user == user) ||
     (subscribtion.event.try(:user) == user)) || user&.admin == true ||
-    (user&.redactor == true && subscribtion.user.admin == false)
+      (user&.redactor == true && subscribtion.user.admin == false)
   end
 end

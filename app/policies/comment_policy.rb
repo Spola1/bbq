@@ -11,6 +11,6 @@ class CommentPolicy < ApplicationPolicy
 
   def current_user_can_edit?(comment)
     user.present? && ((comment.user == user) || (comment.event.try(:user) == user)) ||
-    user&.admin == true || (user&.redactor == true && comment.user.admin == false)
+      user&.admin == true || (user&.redactor == true && comment.user.admin == false)
   end
 end

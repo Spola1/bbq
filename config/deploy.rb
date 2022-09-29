@@ -1,14 +1,14 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.17.0"
+lock '~> 3.17.0'
 
-set :application, "bbqrails"
-set :repo_url, "git@github.com:Spola1/bbq.git"
+set :application, 'bbqrails'
+set :repo_url, 'git@github.com:Spola1/bbq.git'
 
-set :deploy_to, "/home/deploy/www"
+set :deploy_to, '/home/deploy/www'
 
-append :linked_files, "config/database.yml", "config/master.key", ".env"
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+append :linked_files, 'config/database.yml', 'config/master.key', '.env'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
-after "deploy:restart", "resque:restart"
+after 'deploy:restart', 'resque:restart'
 
-set :branch, "main"
+set :branch, 'main'

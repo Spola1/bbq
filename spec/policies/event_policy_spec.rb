@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe EventPolicy, type: :policy do
   let(:user_is_an_owner) { User.new }
@@ -8,43 +8,43 @@ RSpec.describe EventPolicy, type: :policy do
 
   subject { EventPolicy }
 
-  context "when user authorized" do
+  context 'when user authorized' do
     permissions :edit?, :destroy?, :update? do
-      context "and is the owner of event" do
-        it "gets permission" do
+      context 'and is the owner of event' do
+        it 'gets permission' do
           is_expected.to permit(user_is_an_owner, event)
         end
       end
 
-      context "and is the admin" do
-        it "gets permission" do
+      context 'and is the admin' do
+        it 'gets permission' do
           is_expected.to permit(user_is_admin, event)
         end
       end
 
-      context "and is not the owner of event" do
-        it "does not get permission" do
+      context 'and is not the owner of event' do
+        it 'does not get permission' do
           is_expected.not_to permit(user_is_not_an_owner, event)
         end
       end
     end
 
     permissions :show? do
-      it "gets permission" do
+      it 'gets permission' do
         is_expected.to permit(nil, event)
       end
     end
 
     permissions :show? do
-      it "gets permission" do
+      it 'gets permission' do
         is_expected.to permit(user_is_not_an_owner, event)
       end
     end
   end
 
-  context "when user not authotized" do
+  context 'when user not authotized' do
     permissions :edit?, :destroy?, :update? do
-      it "does not gets permission" do
+      it 'does not gets permission' do
         is_expected.not_to permit(nil, event)
       end
     end
